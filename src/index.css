@@ -48,6 +48,15 @@ body {
   background-color: #e8e8e8;
 }
 
+.button {
+  margin: 0 auto;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;;
+}
+
 /* Mobile */
 @media screen and (max-width: 880px) {
   #data-display { grid-template-columns: 1fr; grid-row-gap: 12px; }
@@ -55,3 +64,4 @@ body {
   .data-value { height: auto; }
   .divider { display: none; }
 }
+

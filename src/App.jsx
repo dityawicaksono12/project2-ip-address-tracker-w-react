@@ -175,16 +175,18 @@ export default function App() {
   return (
     <main>
       <div className="container">
-        <div id="home" style={{ backgroundColor: "purple" }} className="page active">
-          <div>
-            <h1>IP Address Tracker</h1>
-            <button onClick={() => callIpify({ mock: true })}>
+        <div id="home" style={{
+          backgroundImage: "url('/src/assets/pattern-bg-desktop.png')",
+          backgroundSize: "cover",}} className="page active">
+          <div style={{ textAlign: "center", color: "white" }}>
+            <h1 style={{ color: "white" }}>IP Address Tracker</h1>
+            <button className="button" onClick={() => callIpify({ mock: true })}>
               Load Sample Data
             </button>
           </div>
 
           {/* Search bar */}
-          <div id="search-container">
+          <div id="search-container" className="search-container">
             <input
               type="text"
               id="search-input"
