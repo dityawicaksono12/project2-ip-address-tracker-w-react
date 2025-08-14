@@ -1,12 +1,8 @@
-# React + Vite
+**Reflection** 
+This project presented interesting chances and yielded some success. I was successful in converting a vanilla JavaScript IP Address Tracker to a React application. I also leveraged Vite for this conversion process. I was also able to maintain the original functionality, such as the IP/domain lookup which used the IPify API. Map rendering occurred via Leaflet. Displaying IP details in a responsive info card worked out, too, along with displaying IP information in an info card which; looked awesome. I did succeed in integrating environment variables (VITE_IPIFY_KEY). Thus, sensitive API keys are not committed to version control. Styling improvements and asset organization help, to match the design mockups pretty well. Adjustments made to the layout ensure the map and info card visually flow together, still need some improvement but definitely satisfying. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Challenges Faced** 
+One issue was deployment. I used the correct framework preset on Vercel (Vite). And, the build command was (npm run build). Furthermore the output directory was (dist). Yet, deployment still posed a challenge. As a consequence the live site misbehaved. Potential causes include; handling background images asset paths and the environment variables are not set. Or, could be that the API requests fail because of the key or CORS issues. I will look over the deployment logs. I want to verify my environment variable setup in Vercel’s dashboard as well. All static assets are either imported or placed in the correct directories such as /public so, Vite can handle things right. 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Next Steps** 
+Revisit the asset paths, and I might move the background images. Moving to the /public directory or importing them into components is a possibility. I will verify VITE_IPIFY_KEY is correctly set. Ensure it's in the production, and preview environments on Vercel. Furthermore, I need to study Vercel's deployment logs. Looking for the build and runtime errors may reveal something. Test API calls and production calls would verify their successful data retrieval. The proper rendering of the map should result from this step. Add the production URL to the README, after fixing deployment.
