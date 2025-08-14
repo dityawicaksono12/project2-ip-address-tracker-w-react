@@ -8,7 +8,11 @@ body {
 }
 
 /* Leaflet map container height */
-#map { height: 550px; }
+#map{
+  margin-top: -96px;     
+  height: 550px;         
+  z-index: 0;
+}
 
 /* Status text */
 #status-div { color: white; }
@@ -24,6 +28,8 @@ body {
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 0 20px -2px #6e6e6e;
+  position: relative;
+  z-index: 1;   
 }
 
 .data-section { padding: 0 32px; }
@@ -64,4 +70,8 @@ body {
   .data-value { height: auto; }
   .divider { display: none; }
 }
+
+
+
+
 
